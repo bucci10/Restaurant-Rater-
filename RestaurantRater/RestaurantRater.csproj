@@ -193,7 +193,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PizzaController.cs" />
-    <Compile Include="Controllers\RestaruantDBContext.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -265,6 +264,7 @@
     <Content Include="Views\Restaurant\Index.cshtml" />
     <Content Include="Views\Restaurant\Create.cshtml" />
     <Content Include="Views\Pizza\Index.cshtml" />
+    <Content Include="Views\Restaurant\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
