@@ -20,13 +20,13 @@ namespace RestaurantRater.Controllers
             return View(db.Restaurants.ToList());
         }
 
-        //GET: Restaurant/Create
+        //GET (Type of http request): Restaurant/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        //POST: Restaurant/Create
+        //POST (Type of http request): Restaurant/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "RestaurantID,Name,Rating,Address")]Restaurant restaurant)
@@ -49,6 +49,8 @@ namespace RestaurantRater.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
+            //Go find in the data base the restaurant id
             Restaurant restaurant = db.Restaurants.Find(id);
             if (restaurant == null)
             {
@@ -99,6 +101,7 @@ namespace RestaurantRater.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Entity: altering content 
                 db.Entry(restaurant).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

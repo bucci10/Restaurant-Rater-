@@ -39,7 +39,7 @@ namespace RestaurantRater
             : base(store)
         {
         }
-
+        //
         public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
         {
             var manager = new ApplicationUserManager(new UserStore<ApplicationUser>(context.Get<ApplicationDbContext>()));
@@ -53,6 +53,7 @@ namespace RestaurantRater
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
             {
+                //TODO: Change 
                 RequiredLength = 6,
                 RequireNonLetterOrDigit = true,
                 RequireDigit = true,

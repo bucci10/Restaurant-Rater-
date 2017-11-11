@@ -9,6 +9,7 @@ namespace RestaurantRater
 {
     public class RouteConfig
     {
+        // Controller sets up structure. It read controller, action, id. 
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
